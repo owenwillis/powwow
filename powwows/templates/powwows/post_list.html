@@ -1,0 +1,33 @@
+{% extends 'powwows/layout.html' %}
+
+
+
+{% block content %}
+
+   
+	
+            {% for post in posts %}
+               	<article>  
+               	<div class="post">
+                    <p>{{ post.text|linebreaks }}</p>
+                    <h4>{{ post.poster }} </h4>
+                    <h5><a target="_blank" href="{{ post.link }}">{{ post.source }}</a> 
+                    	{{ post.published_date | timesince }} ago</h5>
+                   	<br>
+                  	<div id="social">
+		
+						<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://127.0.0.1:8000/post/{{ post.pk }}" data-text="I can't believe what {{ post.poster }} said on powwow 😳" data-size="normal" data-related="powwow" data-count="none">Tweet</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'icon-twitter');</script>
+					</div>	
+                </div>
+               </article> 
+
+            {% endfor %}
+        
+
+        
+
+{% endblock %}
+
+
+

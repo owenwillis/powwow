@@ -1,0 +1,55 @@
+{% extends "powwows/layout.html" %}
+
+<header>
+
+          <div class="row">
+
+            <div class="grid-33">
+              <a href="{% url 'post_list' %}" class="top-menu"><span class="icon-logo"></span>
+              <a href="{% url 'post_list' %}" class="top-menu"><h1>powwow</h1></a>
+            </div>
+
+            <div class="grid-33">
+                
+               
+
+            </div>
+
+            <div class="grid-33">
+                
+             
+              
+                
+            </div>
+
+          </div>
+
+        </header>
+
+
+{% block content %}
+
+   
+	
+            
+               	<article>  
+               	<div class="post">
+                    <p>{{ post.text|linebreaks }}</p>
+                    <h4>{{ post.poster }} </h4>
+                    <h5><a target="_blank" href="{{ post.link }}">{{ post.source }}</a> 
+                    	{{ post.published_date | timesince }} ago</h5>
+                    <br>
+                    <div id="social">
+		
+						<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://127.0.0.1:8000/post/{{post.pk}}" data-text="I can't believe what {{ post.poster }} said on powwow 😳" data-size="normal" data-related="powwow" data-count="none">Tweet</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'icon-twitter');</script>
+					</div>	
+                </div>
+               </article> 
+
+            
+        
+
+        
+
+{% endblock %}
