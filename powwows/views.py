@@ -7,7 +7,7 @@ from .models import Post
 # Create your views here.
 def post_list(request, *args, **kwargs):
 
-    	messages.success(request, 'Welcome to powwow! We collect comments from news sites and share them in a single feed. Enjoy!')
+    messages.success(request, 'Welcome to powwow! We collect comments from news sites and share them in a single feed. Enjoy!')
     
 
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[0:100]
