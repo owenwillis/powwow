@@ -10,12 +10,13 @@
         <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="/static/css/normalize.min.css">
         <link rel="stylesheet" href="/static/css/powwow.css">
+         <style> .myList{ list-style-type: none;} </style>
 
         <!--[if lt IE 9]>
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
             <script>window.html5 || document.write('<script src="/static/js/vendor/html5shiv.js"><\/script>')</script>
         <![endif]-->
-        
+
     </head>
     <body>
 
@@ -28,39 +29,35 @@
               <a href="{% url 'post_list' %}" class="top-menu"><h1>powwow</h1></a>
             </div>
 
-            <div class="grid-33">
-                
-               
-
-            </div>
-
-            <div class="grid-33">
-                
-             
-              
-                
-            </div>
-
-          </div>
+         
 
         </header>
         
         
         
-   
+        
       
       
 
         <div class="row">
 
+
           <div class="main">
 
-            <nav>
-
+            <div class='success'>
+                <br>
+              {% if messages %}
+                <ul class="success">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.as_text }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+             <div class='divider'>
+                <br>
+             </div>
               
-             
-              
-            </nav>
+            </div>
 
             {% block content %}{% endblock %}
 

@@ -122,10 +122,10 @@ nav a.current {
 article {
   border-bottom: 20px solid #D3D8DC;
   
-  
   margin: 10px auto ;
   padding: 10px;
 }
+
 
 article:last-child {
   border-bottom: 0;
@@ -240,13 +240,17 @@ button.small {
 /*Notifications*/
 .notification {
   text-align: center;
+  background-color:#fc636b;
   padding: 10px 20px;
   border-radius: 4px;
   color: #fff;
 }
 .success {
-  background: #70DA8B;
-  color: #4DA463;
+  text-align: center;
+
+  max-width: 800px;
+  background: #00BFFF;
+  color: #fff;
 }
 .error {
   background: #FFE6B2;
@@ -254,6 +258,11 @@ button.small {
   margin-bottom: 20px;
 }
 
+ul{
+    list-style-type: none;
+    padding:0; 
+    margin:0;
+}
 /*Footer*/
 footer{
   color: #777B7E;
@@ -272,6 +281,9 @@ footer p {
   padding: 0 40px;
   margin: 0 auto;
   transition: .35s linear;
+}
+.divider{
+border-bottom: 20px solid #D3D8DC;  
 }
 .row:before, .row:after {
   content: '';
