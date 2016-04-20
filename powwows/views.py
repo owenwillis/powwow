@@ -7,7 +7,6 @@ from .models import Post
 # Create your views here.
 def post_list(request, *args, **kwargs):
 
-    if request.session.get('visited', True):
     	messages.success(request, 'Welcome to powwow! We collect comments from news sites and share them in a single feed. Enjoy!')
     
 
