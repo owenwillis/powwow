@@ -12,33 +12,13 @@
 
 </script>
 
-        <meta property="og:url"           content="http://powwow.pythonanywhere.com" />
+        <meta property="og:url"           content="{% url 'post_detal' %}" />
         <meta property="og:type"          content="website" />
         <meta property="og:title"         content="powwow" />
-        <meta property="og:description"   content="We aggregate comments from news stories and share them in a single feed. Users can share these comments on either Facebook or Twitter" />
+        <meta property="og:description"   content="You won't believe what {{ post.poster }} said on {{ post.source }}" />
 </head>
 <header>
-          <div class="row">
-
-            <div class="grid-33">
-              <a href="{% url 'post_list' %}" class="top-menu"><span class="icon-back"></span>
-              <a href="{% url 'post_list' %}" class="top-menu"><h1>powwow</h1></a>
-            </div>
-
-            <div class="grid-33">
-                
-               
-
-            </div>
-
-            <div class="grid-33">
-                
-             
-              
-                
-            </div>
-
-          </div>
+          
 
         </header>
 
@@ -61,7 +41,7 @@
 
   <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" style="vertical-align:top;zoom:1;*display:inline" data-mobile-iframe="true"></div>
   
-						<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://powwow.pythonanywhere.com/post/{{post.pk}}" data-text="I can't believe what {{ post.poster }} said on powwow 😳" data-size="normal" data-related="powwow" data-count="none">Tweet</a>
+						<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://powwow.pythonanywhere.com/post/{{post.pk}}" data-text="I can't believe what {{ post.poster }} said on {{ post.source}} 😳" data-size="normal" data-related="powwow" data-count="none">Tweet</a>
 						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'icon-twitter');</script>
 
 					

@@ -10,12 +10,15 @@
   ga('create', 'UA-76610504-1', 'auto');
   ga('send', 'pageview');
 
-</script>
+  <title>powwow</title>
 
-        <meta property="og:url"           content="http://powwow.pythonanywhere.com" />
+<meta property="og:url"           content="http://powwow.pythonanywhere.com" />
         <meta property="og:type"          content="website" />
         <meta property="og:title"         content="powwow" />
         <meta property="og:description"   content="We aggregate comments from news stories and share them in a single feed. Users can share these comments on either Facebook or Twitter" />
+</script>
+
+        
 
 </head>
 
@@ -30,17 +33,18 @@
 	
             {% for post in posts %}
                	<article>  
-               	<div class="post">
+               	<div class="row">
                     <p>{{ post.text|linebreaks }}</p>
                     <h4>{{ post.poster }} </h4>
                     <h5><a target="_blank" href="{{ post.link }}">{{ post.source }}</a> 
                     	{{ post.published_date | timesince }} ago</h5>
                    	<br>
-                  	
-		      <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" style="vertical-align:top;zoom:1;*display:inline" data-mobile-iframe="true"></div>
+           <div class="post">       	
+		      <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" style="vertical-align:top;zoom:1;*display:inline;z-index:0" data-mobile-iframe="true"></div>
      
-						<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://powwow.pythonanywhere.com/post/{{ post.pk }}" data-text="I can't believe what {{ post.poster }} said on powwow 😳" data-size="normal" data-related="powwow" data-count="none">Tweet</a>
+						<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://powwow.pythonanywhere.com/post/{{ post.pk }}" data-text="I can't believe what {{ post.poster }} said on {{ post.source }} 😳" data-size="normal" data-related="powwow" data-count="none">Tweet</a>
 						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'icon-twitter');</script>
+          </div>
 					</div>	
                 
                </article> 
