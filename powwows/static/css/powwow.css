@@ -319,6 +319,12 @@ border-bottom: 20px solid #D3D8DC;
 margin:0 auto;
 
 }
+.post{
+  max-width: 800px;
+  padding: 0 20px;
+  margin: 0 auto;
+  transition: .35s linear;
+}
 
 /*Media Queries*/
 @media (max-width: 728px) {
@@ -333,10 +339,9 @@ margin:0 auto;
     width: 100%;
   }
   .row {
-    padding: 0 10px;
+    
 }
 
 .post {
-    white-space: pre;
-    width: 50%;
+    padding: 0 10px;
 }
