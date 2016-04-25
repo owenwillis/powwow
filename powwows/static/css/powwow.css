@@ -330,6 +330,7 @@ margin:0 auto;
 @media (max-width: 728px) {
   .main {
     margin: 10px auto;
+    margin-top: 15%;
   }
   .grid-25 {
     width: 46%;
