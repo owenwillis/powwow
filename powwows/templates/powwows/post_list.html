@@ -39,18 +39,24 @@
                     <h5><a target="_blank" href="{{ post.link }}">{{ post.source }}</a> 
                     	{{ post.published_date | timesince }} ago</h5>
                    	<br>
-           <div class="row">       	
+                	
 		      <div class="fb-share-button" data-href="http://www.thepowwow.co" data-layout="button" style="vertical-align:top;zoom:1;*display:inline;z-index:0" data-mobile-iframe="true"></div>
      
 						<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://powwow.pythonanywhere.com/post/{{ post.pk }}" data-text="I can't believe what {{ post.poster }} said on {{ post.source }} 😳" data-size="normal" data-related="powwow" data-count="none">Tweet</a>
 						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'icon-twitter');</script>
-          </div>
+          
 					</div>	
                 
                </article> 
 
             {% endfor %}
     
+
+
+        
+
+{% endblock %}
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -59,10 +65,4 @@
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=1721705068104461";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script> 
-
-        
-
-{% endblock %}
-
-
 
