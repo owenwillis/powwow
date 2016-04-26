@@ -89,10 +89,10 @@ header {
 }
 
 .facebook-share-button{
-  width:20px ;
-  height:20px;
+  width:40px ;
+  height:40px;
   background: url('../img/facebook-button.svg') center no-repeat;
-  background-size:20px 20px ;
+  background-size:40px 40px ;
   display:block;
 
 }
@@ -101,7 +101,7 @@ header {
   width:20px ;
   height:20px;
   background: url('../img/twitter-button.svg') center no-repeat;
-  background-size:20px 20px ;
+  background-size:40px 40px ;
   display:block;
 }
 
