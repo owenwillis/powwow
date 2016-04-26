@@ -88,7 +88,7 @@ header {
   float: center;
 }
 
-.facebook-share-button{
+.facebook-custom-share-button{
   width:40px ;
   height:40px;
   background: url('../img/facebook-button.svg') center no-repeat;
@@ -97,7 +97,7 @@ header {
 
 }
 
-.twitter-share-button{
+.twitter-custom-share-button{
   width:20px ;
   height:20px;
   background: url('../img/twitter-button.svg') center no-repeat;
