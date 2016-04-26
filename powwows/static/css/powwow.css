@@ -88,6 +88,23 @@ header {
   float: center;
 }
 
+.facebook-share-button{
+  width:20px ;
+  height:20px;
+  background: url('static/img/facebook-button.svg') center no-repeat;
+  background-size:20px 20px ;
+  display:block;
+
+}
+
+.twitter-share-button{
+  width:20px ;
+  height:20px;
+  background: url('static/img/twitter-button.svg') center no-repeat;
+  background-size:20px 20px ;
+  display:block;
+}
+
 /*Main*/
 .main {
   max-width: 800px;
