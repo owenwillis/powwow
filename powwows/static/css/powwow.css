@@ -88,7 +88,7 @@ header {
   float: center;
 }
 
-.facebook-button{
+.facebook-share-button{
   width:20px ;
   height:20px;
   background: url('../img/facebook-button.svg') center no-repeat;
