@@ -94,7 +94,7 @@ header {
   background: url('../img/facebook-button.svg') center no-repeat;
   background-size:40px 40px ;
   display:block;
-
+  margin-right: 10px
 }
 
 .twitter-custom-share-button{
