@@ -90,13 +90,7 @@ header {
 
 
 
-.twitter-share-button{
-  width:40px ;
-  height:40px;
-  background: url('../img/twitter-button.svg') center no-repeat;
-  background-size:40px 40px ;
-  display:block;
-}
+
 
 /*Main*/
 .main {
