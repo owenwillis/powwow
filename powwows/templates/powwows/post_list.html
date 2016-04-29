@@ -30,7 +30,8 @@
 {% block content %}
 
    
-	
+	   {% load el_pagination_tags %}
+          {% paginate posts %}
             {% for post in posts %}
                	<article>  
                	<div class="post">
@@ -50,6 +51,7 @@
                </article> 
 
             {% endfor %}
+            {% show_pages %}
     
 
 
