@@ -11,7 +11,7 @@ def post_list(request, *args, **kwargs):
     messages.success(request, 'Welcome to powwow! We collect comments from news stories and share them in a single feed. Enjoy!')
     
 
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[0:100]
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     
     return render(request, 'powwows/post_list.html', {'posts':posts})
 
