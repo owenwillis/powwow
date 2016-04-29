@@ -27,38 +27,28 @@
 </header>
 
 
+
+
 {% block content %}
+{% include page_template %}
 
-   
-	   {% load el_pagination_tags %}
-          {% paginate posts %}
-            {% for post in posts %}
-               	<article>  
-               	<div class="post">
-                    <p>{{ post.text|linebreaks }}</p>
-                    <h4>{{ post.poster }} </h4>
-                    <h5><a target="_blank" href="{{ post.link }}">{{ post.source }}</a> 
-                    	{{ post.published_date | timesince }} ago</h5>
-                   	<br>
-           <div class="social">      	
-		      <div class="fb-share-button" data-href="http://www.thepowwow.co" data-layout="button" style="vertical-align:top;zoom:1;*display:inline;z-index:0" data-mobile-iframe="true"></div>
-     
-						<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://thepowwow.co/post/{{ post.pk }}" data-text="I can't believe what {{ post.poster }} said on {{ post.source }} 😳 #{{ post.tag1 }}" data-size="normal" data-related="powwow" data-count="none"></a>
-						</div>
-          
-					</div>	
-                
-               </article> 
+{% block js %}
+    {{ block.super }}
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="{{ STATIC_URL }}el-pagination/js/el-pagination.js"></script>
+    <script>
+        $.endlessPaginate({
+            paginateOnScroll: true,
+            paginateOnScrollMargin: 20
+        });
+    </script>
+{% endblock %}
 
-            {% endfor %}
-            {% show_pages %}
-            {{ pages.previous }} {{ pages.next }}
-    
-
+{% endblock %}
 
         
 
-{% endblock %}
+
 
 
 
