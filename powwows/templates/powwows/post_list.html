@@ -18,18 +18,7 @@
         <meta property="og:description"   content="We aggregate comments from news stories and share them in a single feed. Users can share these comments on either Facebook or Twitter" />
 </script>
 
-
-{% block js %}
-    {{ block.super }}
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="{{ STATIC_URL }}el-pagination/js/el-pagination.js"></script>
-    <script>
-        $.endlessPaginate({
-            paginateOnScroll: true,
-            paginateOnScrollMargin: 20
-        });
-    </script>
-{% endblock %}
+        
 
 </head>
 
@@ -42,7 +31,7 @@
 
    
 	   {% load el_pagination_tags %}
-          {% lazy_paginate posts %}
+          {% paginate posts %}
             {% for post in posts %}
                	<article>  
                	<div class="post">
@@ -62,8 +51,8 @@
                </article> 
 
             {% endfor %}
-            {% show_more %}
-            
+            {% show_pages %}
+            {{ pages.previous }} {{ pages.next }}
     
 
 
