@@ -12,10 +12,10 @@ body {
 }
 a {
   text-decoration: none;
-  color: #2C3238;
+  color: #fd5c63;
 }
 a:hover {
-  color: #fd5c63;
+  color: #fff;
 }
 
 /*Typography*/
@@ -42,7 +42,7 @@ h3 {
 h4 {
   margin: 0;
     line-height: 1.5em;
-    color: #fc636b;
+    color: #fff;
 }
 h5 {
     margin: 0;
