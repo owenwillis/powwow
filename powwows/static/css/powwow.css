@@ -323,6 +323,7 @@ border-bottom: 20px solid #D3D8DC;
 .social {
   margin:0 auto;
   display: inline;
+  vertical-align: middle !important;
 
 }
 .post{
