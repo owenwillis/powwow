@@ -321,7 +321,8 @@ border-bottom: 20px solid #D3D8DC;
   margin: 0 2.25%;
 }
 .social {
-margin:0 auto;
+  margin:0 auto;
+  display: inline;
 
 }
 .post{
