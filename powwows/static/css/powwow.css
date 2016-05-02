@@ -325,8 +325,18 @@ border-bottom: 20px solid #D3D8DC;
   display: inline-block;
   margin: 0 auto;
   vertical-align: middle !important;
-
 }
+.social iframe {
+        vertical-align: bottom;
+    }
+
+    /* Set an optional width for your button wrappers */
+    .social span {
+        display: inline-block;
+        width: 110px;
+    }
+
+
 .post{
   max-width: 800px;
   padding: 0 20px;
