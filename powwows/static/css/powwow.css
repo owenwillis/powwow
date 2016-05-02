@@ -322,7 +322,8 @@ border-bottom: 20px solid #D3D8DC;
 }
 .social {
   margin:0 auto;
-  display: inline;
+  display: inline-block;
+  margin: 0 auto;
   vertical-align: middle !important;
 
 }
