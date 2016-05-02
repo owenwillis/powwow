@@ -349,6 +349,11 @@ border-bottom: 20px solid #D3D8DC;
     
 }
 
+.social {
+  display: inline;
+  height: 20px;
+}
+
 .post {
     padding: 0 10px;
 }
