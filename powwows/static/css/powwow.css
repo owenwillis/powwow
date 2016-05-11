@@ -47,11 +47,11 @@ h4 {
 }
 h5 {
     margin: 0;
-  
+  line-height: 1.5em;
 }
 h6{
   margin:0;
-  
+  line-height:1em;
 }
 p {
   margin: 0;
